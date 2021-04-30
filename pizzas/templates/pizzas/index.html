@@ -2,15 +2,40 @@
 
 
 
-.header {
-    padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px;
-  }
-
 {% block content %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the body */
+body {
+  font-family: Luminari,fantasy ;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #d8350d;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+</style>
+</head>
+<body>
+
 
 <div class="header">
     <h1>Welcome to the Pizzeria!</h1>
@@ -19,11 +44,14 @@
 
   
 
-<p>Welcome to the Pizzeria!
-</p>
 
 
+<div class="content">
+  <h1>Our Mission</h1>
+  <p>Spread the joy of good food to Waco, Texas.</p>
+</div>
+
+</body>
+</html>
 
 {% endblock content %}
-
-
