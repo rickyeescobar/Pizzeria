@@ -1,7 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Style the body */
+body {
+  font-family: Luminari,fantasy ;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #d8350d;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+</style>
+</head>
+<body>
+
+
+
+
 <p>
     <a href= "{% url 'pizzas:index' %}">  Home  </a>
     &nbsp    &nbsp    &nbsp
-    
+
     <a href= "{% url 'pizzas:pizzas' %}">  Pizzas  </a>
 </p>
 
