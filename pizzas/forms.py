@@ -1,10 +1,10 @@
 from django import forms
-from .models import Pizza
+from .models import Comment
 
 
 class PizzaForm(forms.ModelForm):
     class Meta:
-        model = Pizza
+        model = Comment
         fields = ['text']
         label = {'text:':''}
         widgets = {'text':forms.Textarea(attrs={'cols':80})}

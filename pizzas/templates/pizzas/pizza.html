@@ -2,9 +2,43 @@
 
 
 {% block content %}
+<html lang="en">
+<head>
+<title>Pizza</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    /* Style the body */
+    body {
+      font-family: Luminari,fantasy ;
+      margin: 0;
+    }
+    
+    /* Header/Logo Title */
+    .header {
+      padding: 60px;
+      text-align: center;
+      background: #d8350d;
+      color: white;
+      font-size: 30px;
+    }
+    
+    /* Page Content */
+    .content {padding:20px;
+      background: #d8350d;
+      color: white;
+      font-size: 20px;}
+    </style>
+    </head>
+    <body>
 
 
+
+<div class="content">
 <p>Pizza: {{pizza}} </p>
+</div>
+<h1>Toppings:</h1>
 
 <ul>
     {% for topping in toppings %}
@@ -16,5 +50,19 @@
     <li> There are no toppings for this pizza yet.</li>
     {% endfor %}
 </ul>
+<p>Comments:</p>
+<ul>
+    {% for new_comment in new_comments %}
+    <li>
+        <p>{{ new_comment.text | linebreaks }}</p>
+    </li>
+    
+    {% empty %}
+    <li> There are no comments for this pizza yet.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'pizzas:new_comment' pizza.id %}"> {{ pizza }} Add a new comment </a>
 
+
+</body>
 {% endblock content %}
