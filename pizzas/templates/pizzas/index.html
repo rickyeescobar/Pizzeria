@@ -54,9 +54,10 @@ body {
 
 <div>
 
-{% load static %}
-<img src="{% static 'hawaiian_pizza.jpeg'  %}" alt='Hawaiian Pizza'>
-
+  {% if pizza.header_image %}
+  <img src="{{ pizza.header_image.url }}" class="img-thumbnail" style="max-height: height 300px" alt="">
+  {% endif %}
+  
 </div>
 
 

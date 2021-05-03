@@ -29,6 +29,11 @@
       background: #d8350d;
       color: white;
       font-size: 20px;}
+
+    img {
+  max-width: 50%;
+  height: auto;
+}
     </style>
     </head>
     <body>
@@ -63,6 +68,13 @@
 </ul>
 <a href="{% url 'pizzas:new_comment' pizza.id %}"> {{ pizza }} Add a new comment </a>
 
-
+<br>
 </body>
+<br>
+
+{% if pizza.header_image %}
+
+<img src="{{ pizza.header_image.url }}" class="img-thumbnail" style="max-height: height 200px" alt="" >
+{% endif %}
+
 {% endblock content %}
