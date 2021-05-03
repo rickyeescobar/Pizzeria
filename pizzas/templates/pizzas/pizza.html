@@ -33,6 +33,9 @@
     img {
   max-width: 50%;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
     </style>
     </head>
@@ -55,6 +58,13 @@
     <li> There are no toppings for this pizza yet.</li>
     {% endfor %}
 </ul>
+
+{% if pizza.header_image %}
+
+<img src="{{ pizza.header_image.url }}" class="img-thumbnail" style="max-height: height 200px" alt="" >
+{% endif %}
+
+
 <p>Comments:</p>
 <ul>
     {% for new_comment in new_comments %}
@@ -72,9 +82,6 @@
 </body>
 <br>
 
-{% if pizza.header_image %}
 
-<img src="{{ pizza.header_image.url }}" class="img-thumbnail" style="max-height: height 200px" alt="" >
-{% endif %}
 
 {% endblock content %}
